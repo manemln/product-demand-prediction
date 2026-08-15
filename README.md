@@ -219,6 +219,10 @@ model.predict(features)
 
 Selling at **133.00** against a base price of **140.00** gives **42 units** expected.
 
+The notebook writes this result to [`outputs/model_results.csv`](outputs/model_results.csv), and
+the discount table below to [`outputs/price_sweep.csv`](outputs/price_sweep.csv), so the reported
+numbers can be checked without running anything.
+
 That prediction comes from 12 threshold questions, which narrow 120,119 training rows down to the
 871 most similar past sales. Their average is 41.79 units.
 
@@ -247,6 +251,9 @@ product-demand-prediction/
 ├── requirements.txt
 ├── data/
 │   └── demand.csv                    # Cached copy of the dataset
+├── outputs/                          # Saved results, written by the notebook
+│   ├── model_results.csv             # Scores and the required prediction
+│   └── price_sweep.csv               # Predicted demand across discount levels
 └── images/                           # Image exports, for viewing on GitHub
     ├── units-sold-vs-price.png
     ├── base-price-vs-demand.png

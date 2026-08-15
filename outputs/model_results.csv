@@ -1,0 +1,2 @@
+model,test_r2,train_r2,test_mae_units,example_total_price,example_base_price,example_predicted_units
+"DecisionTreeRegressor(max_depth=12, random_state=42)",0.4333,0.5067,25.13,133.0,140.0,41.79
